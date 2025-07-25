@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include <stdlib.h>
+int main()
+{
+//Interest calculator program
+//Interest = Principal × Rate × Time / 100
+ float money,interest,interest_rate,duration;
+    printf("Enter the principal amount:");
+    scanf("%f",&money);
+    printf("Enter the interest rate (as %):");
+    scanf("%f",&interest_rate);
+    printf("Enter the time (in years):");
+    scanf("%f",&duration);
+
+    interest = money*interest_rate*duration/100;
+    printf("Calculated interest: %.2f\n",interest);
+    printf("Total amount: %.2f",interest+money);
+
+
+
+return 0;
+}
