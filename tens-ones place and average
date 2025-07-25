@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include <stdlib.h>
+int main()
+{
+//Program to find the tens and ones digits of a number entered
+//Program to find the arithmetic mean of four numbers entered
+
+int number,remainder, divided;
+    printf("enter number:");
+    scanf("%d",&number);
+    divided=(number%100)/10;
+    remainder=number%10;
+    printf("tens place: %d\nones place: %d\n",divided,remainder);
+
+    float a,b,c,d,average;
+    printf("enter four numbers:\n");
+    scanf("%f%f%f%f",&a,&b,&c,&d);
+    average=(a+b+c+d)/4;
+
+    printf("average of numbers: %.2f",average);
+
+
+ return 0;
+}
