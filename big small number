@@ -1,0 +1,68 @@
+ #include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+
+
+int main()
+{
+    setlocale(LC_ALL,"Turkish");
+
+    //program that determines the largest and smallest of 3 numbers received from the user using conditional expressions
+    float num1=0,num2=0,num3=0;
+    printf("enter three number:\n");
+    scanf("%f%f%f",&num1,&num2,&num3);
+    if (num1>num2 && num1>num3){
+            if(num2>num3){
+                printf("largest number: %.2f\nsmallest number: %.2f",num1,num3);
+            }
+             else if(num3>num2){
+                 printf("largest number: %.2f\nsmallest number: %.2f",num1,num2);
+
+            }
+            else{
+             printf("largest number: %.2f\nsmallest numbers: %.2f and %.2f",num1,num2,num3);
+            }
+            }
+    else if(num2>num1 && num2>num3){
+            if(num1>num3){
+                 printf("largest number: %.2f\nsmallest number: %.2f",num2,num3);
+
+            }
+            else if(num3>num1){
+                 printf("largest number: %.2f\nsmallest number: %.2f",num2,num1);
+             }
+            else{
+                 printf("largest number: %.2f\nsmallest numbers: %.2f and %.2f",num2,num1,num3);
+            }
+    }
+    else if(num3>num1 && num3>num2){
+        if(num1>num2){
+             printf("largest number: %.2f\nsmallest number: %.2f",num3,num2);
+        }
+        else if(num2>num1){
+            printf("largest number: %.2f\nsmallest number: %.2f",num3,num1);
+        }
+        else{
+           printf("largest number: %.2f\nsmallest numbers: %.2f and %.2f",num3,num1,num2);
+        }
+       }
+    else{
+        printf("numbers are equal %.2f %.2f %.2f",num1,num2,num3);
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    return 0;
+
+}
