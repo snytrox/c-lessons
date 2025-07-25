@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include <stdlib.h>
+int main()
+{
+    //Program to find the sum of the digits of a 4-digit number
+    int number,quotient,remainder,sum;
+    sum =0;
+
+    printf("Enter a 4-digit number: ");
+    // scanf("%d",&number);
+    quotient= number/1000;
+    sum+=quotient;
+    remainder =number%1000;
+   remainder=kalan/100;
+    sum+=quotient;
+   remainder =kalan%100;
+    quotient=remainder/10;
+    sum+=quotient;
+   remainder=remainder %10;
+    sum+=remainder;
+    printf("sum of digits: %d\n\n\n\n",sum);
+
+return 0;
+}
