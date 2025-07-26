@@ -37,6 +37,8 @@ case '+':
         printf("%,2f / %,2f = %,2f",num2,num1,sum);
         }
         break;
+default:
+        printf("Invalid operation\n");
 }
 
 
