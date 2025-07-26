@@ -7,15 +7,15 @@ int main()
 
 {
     setlocale(LC_ALL,"Turkish");
-    int num1=0 ,squatRoot=0;
+    int num1=0 ,squareRoot=0;
 
     printf("enter a positeve number:\n");
     scanf("%f",&num1);
     if(num1<0){printf("please do not do this\n");}
     else{
-            squatRoot=sqrt(num1);
-    if (squatRoot*squatRoot==num1){printf("squat root of %d is an integer.\n",num1);
-    printf("squat root of %d",squatRoot);}
+            squareRoot=sqrt(num1);
+    if (squareRoot*squareRoot==num1){printf("square root of %d is an integer.\n",num1);
+    printf("square root of %d",squareRoot);}
     else{printf("no is it not\n");}
 
     }
