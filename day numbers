@@ -1,0 +1,26 @@
+#include <stdio.h>
+#include <stdlib.h>
+int main(){
+    int monthNumber=0;
+    printf("which month:");
+    scanf("%d",&monthNumber);
+    switch(monthNumber){
+    case 4:
+    case 6:
+    case 9:
+    case 11: printf("they are 30 days in %dth month\n",monthNumber);
+    break;
+    case 1:
+    case 3:
+    case 5:
+    case 7:
+    case 8:
+    case 10:
+    case 12: printf("the are 31 days in %dth month \n",monthNumber);
+    break;
+    case 2: printf("the are 28 or 29 days in %dth month \n",monthNumber);
+    break;
+    default: printf("there is no %dth month",monthNumber);
+    }
+return 0;
+}
