@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+
+int main()
+//A GSM phone charges 0.30 TL for up to 4 minutes of talk time.
+//However, if the call time exceeds 4 minutes, it charges 0.07 TL for each minute after that.
+{
+
+ float talkTime,pee;  //konuşma süresi, ücret
+ printf("Phone talk time;");
+ scanf("%f",&talkTime);
+ if (talkTime<=4){
+    pee=0.3;
+ }
+ else{
+    pee=0.07;
+    pee=(talkTime-4)*0.07+0.3;
+ }
+
+printf("fee %.3f tl",pee);
+
+return 0;
+}
