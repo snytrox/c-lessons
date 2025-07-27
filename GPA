@@ -1,0 +1,29 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int i=1;
+    float sumGrade=0.0,examGrade=0.0,average=0.0;
+    do{                                             //sonsuz döngü yapabilirsin do while ile
+        printf("%dth exam grade: ",i);
+        scanf("%f",&examGrade);
+        if(examGrade==0){
+        break;    //break olmazsa while sayesinde döngü yine sonlanır ama i++ bloğu çalışır.
+        }if(examGrade<0){
+        printf("please enter a positive number\n");
+        continue;}  //görmezden gel kodu başa al
+        else{
+         sumGrade+=examGrade;
+        }
+       i++;
+    }
+    while(examGrade!=0);
+    if (i-1==0){
+        average=0.0;
+    }
+    else{average=sumGrade/(i-1);}
+    printf("you entered %d exam grade\n",i-1);
+    printf("average %.2f: ",average);
+return 0;
+}
