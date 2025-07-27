@@ -1,0 +1,20 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int i=1;
+    float num=0.0,smallestnumber=0.0,largestnumber=0.0;
+ do {
+    printf("%dth number:",i);
+    scanf("%f",&num);
+    if (num==0) break;
+    if(num>largestnumber) largestnumber=num;
+    if(num<smallestnumber) smallestnumber=num;
+    i++;
+
+ }while(num!=0);
+ printf("the largest number %.2f\n",largestnumber);
+ printf("the smallest number %.2f",smallestnumber);
+ return 0;
+}
