@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+  int i;
+    unsigned long long current = 1; // 1. kareye konacak pirinç
+    unsigned long long total = 1;   // Toplam pirinç (başlangıçta 1)
+
+    printf("1. kare: %llu pirinc\n", current);
+
+    for (i = 2; i <= 64; i++) {
+        current = total * 2;      // yeni kare = önceki toplamın 2 katı
+        total += current;         // yeni kareyi de toplamın üstüne ekle
+
+        printf("%d. kare: %llu pirinc\n", i, current);
+    }
+
+    printf("\nToplam pirinc: %llu tane\n", total);
+
+
+
+
+
+
+
+    return 0;
+}
