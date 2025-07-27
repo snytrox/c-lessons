@@ -1,0 +1,17 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+  int i ,num;
+ unsigned int mult=1;         //unsigned int pozitif tam sayılar için int'ten daha fazla alan kapsar
+    printf("enter a number:");
+    scanf("%d",&num);
+
+   for(i=num;1<i;i--){         //i==num olursa döngü bir kez çalışır o da eşit olduğunda
+     mult*=i;
+   }
+printf("%d! = %u",num,mult);
+
+    return 0;
+}
