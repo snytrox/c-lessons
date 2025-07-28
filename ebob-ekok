@@ -1,0 +1,29 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int i,EBOB=0,EKOK=0,num,num2,smallNumber;
+    printf("enter two number:\n");
+    scanf("%d%d",&num,&num2);
+if(num<num2)
+    smallNumber=num;
+else
+smallNumber=num2;
+for(i=2;i<=smallNumber;i++){
+    if(num%i==0 && num2%i==0)
+        EBOB=i;
+   }
+if (EBOB!=0){
+        EKOK=num*num2/EBOB;
+    printf("ebob %d\nekok %d",EBOB,EKOK);
+}
+
+else{
+    EKOK=num*num2;
+     printf("ebobu yok \nekok %d",EKOK);
+}
+
+
+    return 0;
+}
