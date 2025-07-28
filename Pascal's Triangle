@@ -1,0 +1,34 @@
+#include <stdio.h>  // Giriş/çıkış işlemleri için gerekli kütüphane
+
+int main() {
+    int i, j, space, rows, num;
+
+    // Kullanıcıdan satır sayısı alınır
+    printf("Enter number of rows: ");
+    scanf("%d", &rows);
+
+    // Satır satır Pascal üçgenini yazdır
+    for(i = 0; i < rows; i++) {
+
+        // Üçgen şeklinde görünmesi için her satırın başına boşluk koy
+        for(space = 1; space <= rows - i; space++) {
+            printf("  "); // Her boşluk için iki karakterlik yer bırak
+        }
+
+        num = 1; // Her satırın ilk elemanı 1’dir (C(i, 0) = 1)
+
+        // Satırdaki her elemanı yazdır
+        for(j = 0; j <= i; j++) {
+            // Elemanı hizalı biçimde yazdır (4 karakter genişlik)
+            printf("%4d", num);
+
+            // Sonraki elemanı hesapla: C(i, j+1) = C(i, j) * (i - j) / (j + 1)
+            num = num * (i - j) / (j + 1);
+        }
+
+        // Bir satır tamamlandıktan sonra bir alt satıra geç
+        printf("\n");
+    }
+
+    return 0;
+}
