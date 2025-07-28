@@ -12,8 +12,32 @@ int main()
                 printf("* ");
             }else printf("  ");
         }
-        printf("\n");
+        printf("\n"); }
+
+
+
+
+ char letter, firstLetter='A';
+   int i,j;
+   printf("enter a uppercase letter:");                        
+   scanf("%c",&letter);
+   for(i=1;i<=letter-'A'+1;i++){
+
+
+    for(j=1;j<=i;j++){
+    printf("%c",firstLetter);
+
     }
+    firstLetter++;
+    printf("\n"); }
+
+/*
+A
+BB
+CCC
+DDDD
+.......
+*/
 
 return 0;
 }
