@@ -1,0 +1,26 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int i,j,num,a=0 ;
+    float mid;
+    char letter;
+
+    printf("enter a letter:");
+    scanf("%c",&letter);
+    printf("enter an odd number:");
+    scanf("%d",&num);
+    mid= num/2;
+    for(i=0;i<num;i++){
+            if(i<=mid)   
+            a++;
+            else
+                a--;
+        for(j=1;j<a;j++)
+            printf(" ");
+        printf("%c\n",letter);
+
+    }
+ return 0;
+}
