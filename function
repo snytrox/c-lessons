@@ -1,0 +1,37 @@
+#include <stdio.h>
+#include <stdlib.h>
+int sumNumber(int i);
+float exponentiation(float x, int y);
+int main()
+{
+  int result = sumNumber(19);
+printf("%d\n",result);
+   
+   float base=0,result=1;
+   int exponent=0;
+   printf("enter base and exponent value;\n");
+   scanf("%f%d",&base,&exponent);
+   printf("%.2f",exponentiation(base,exponent));
+     return 0;
+}
+float exponentiation(float x, int y){
+    float result=1;
+    int i;
+if(y<0){
+    for(i=0;i<-y;i++)
+        result*=1/x;
+}
+else{
+     for(i=0;i<y;i++)
+        result*=x;
+}
+return result;
+
+}
+
+int sumNumber(int i){
+if(i>0)
+    return i + sumNumber(i-1);
+    else
+    return 0;
+}
