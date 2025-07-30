@@ -1,0 +1,55 @@
+#include <stdio.h>
+#include <stdlib.h>
+void birlikcevir(int);
+void onlukcevir(int);
+int main()
+
+{
+    int d4,d3,d2,d1,number=0;
+    while(number!=-1){
+
+     printf("\nenter a four digit number:");
+     scanf("%d",&number);
+     if (number==-1)break;
+     d1 = number%10;
+     d2 = (number%100)/10;
+     d3 = (number%1000)/100;
+     d4 = number/1000;
+     if(d4!=1){ birlikcevir(d4);
+
+     }if(d4==0)
+        continue;
+        printf(" Bin ");
+     if(d3!=1)  birlikcevir(d3);
+     if(d3!=0) printf(" Yuz ");
+       onlukcevir(d2);
+      printf(" ");
+     birlikcevir(d1);
+     printf("\n\n");
+
+    }
+return 0;
+}
+void birlikcevir(int num){
+    switch(num){
+    case 1: printf("Bir"); break;
+    case 2: printf("Iki"); break;
+    case 3: printf("Uc"); break;
+    case 4: printf("Dort"); break;
+    case 5: printf("Bes"); break;
+    case 6: printf("Alti"); break;
+    case 7: printf("Yedi"); break;
+    case 8: printf("Sekiz"); break;
+    case 9: printf("Dokuz"); break;}
+}
+void onlukcevir(int num){
+    switch(num){
+    case 1: printf("On"); break;
+    case 2: printf("Yirmi"); break;
+    case 3: printf("Otuz"); break;
+    case 4: printf("Kirk"); break;
+    case 5: printf("Elli"); break;
+    case 6: printf("Atmis"); break;
+    case 7: printf("Yetmis"); break;
+    case 8: printf("Seksen"); break;
+    case 9: printf("Doksan"); break;}}
