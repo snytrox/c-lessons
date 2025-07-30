@@ -1,0 +1,19 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>  //rand()ve srand() için
+#include <time.h> //time(NULL); için
+int main()
+{
+    int i,number=0,number1,number2;
+    srand(time(NULL)); /*strand seed değerini değiştirir. rastgele sayı üretecin başlama noktasını seed
+    Yani seed’i değiştirerek farklı sayılar alırsın
+    döngünün dışında çünkü içinde olsa 1 saniyeden kısa süreden işlem olur sonuş değişmez */
+    for(i=1;i<=3;i++){
+
+        number = rand(); //kendi kafasına göre aralıktan seçiyor
+        number1=rand()%3;  // 0<=x<3  0,1,2
+        number2=rand()%2+3; // 0+2<=x<=2+3  2<=x=5 2,3,4
+    printf("%d\n%d\n%d\n",number,number1,number2);
+    printf("\n\n");
+    }
+}
