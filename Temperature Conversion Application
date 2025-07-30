@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h> //stricmp()(windows) için ekledik büyük küçük harfe duyarlı değil duyarlısı strcmp() mac de strcasecmp() 
+float celsius(float);
+float fahrenheit(float);
+int main()
+{
+    float number;
+    char word[10];
+    printf("which type should it be converted to?(celsius/fahrenheit):");
+    scanf("%s",word);
+    printf("enter a number:");
+    scanf("%f",&number);
+      if (stricmp(word, "celsius") == 0)          //stricmp karşılaştırma yapar iki şey arasında aynıysa return 0 
+        printf("%.2f\n", celsius(number));
+    else if (stricmp(word, "fahrenheit") == 0)     //stricmp("elma(x)",elmas(y)") x<y return<0  eğer x>y ise return>0
+        printf("%.2f\n", fahrenheit(number));
+    else
+        printf("Invalid input\n");
+
+    return 0;
+
+return 0;}
+
+float celsius(float x){
+return (x-32)*5/9;}
+float fahrenheit(float y){
+return(y*9/5)+32;}
